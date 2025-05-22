@@ -26,7 +26,7 @@ def get_embedding(text, tokenizer, model):
     inputs = tokenizer(text, return_tensors="pt", truncation=True, padding=True)
     with torch.no_grad():
         outputs = model(**inputs)
-        return outputs.last_hidden_state.mean(dim=1).squeeze().numpy()
+        return outputs.last_hidden_state.mean(dim=1).squeeze().cpu().numpy()
 
 def chunk_text(text, max_len=500):
     words = text.split()
