@@ -4,3 +4,6 @@ sentence-transformers
 faiss-cpu
 transformers
 requests
+torch
+sentencepiece
+PyPDF2
