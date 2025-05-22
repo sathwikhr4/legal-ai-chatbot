@@ -56,7 +56,7 @@ def summarize_text(texts):
     return summaries
 
 # Streamlit Interface
-st.title("🇮🇳 Legal Assistant Chatbot (Free & Online)")
+st.title("🇮🇳 Legal Assistant Chatbot")
 st.markdown("Ask any question from:\n- Guide to Litigation in India\n- ICAI Corporate Law Guide")
 
 if st.button("Load PDFs & Initialize Chatbot"):
