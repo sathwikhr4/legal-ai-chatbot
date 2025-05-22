@@ -45,7 +45,7 @@ def search_index(index, chunks, embeddings, query, top_k=3):
     D, I = index.search(np.array([query_embedding]).astype('float32'), top_k)
     return [chunks[i] for i in I[0]]
 
-summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
+summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6", device=-1)
 
 def summarize_text(texts):
     summaries = []
