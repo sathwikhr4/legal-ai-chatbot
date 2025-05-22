@@ -32,7 +32,13 @@ def extract_text_from_pdf(pdf_path):
                 full_text += text + "\n"
     return full_text
 
-model = SentenceTransformer('all-MiniLM-L6-v2')
+# model = SentenceTransformer('all-MiniLM-L6-v2')
+from sentence_transformers import SentenceTransformer
+import torch
+
+# Force CPU device
+device = "cpu"
+model = SentenceTransformer('all-MiniLM-L6-v2', device=device)
 
 def build_index(text_chunks):
     embeddings = model.encode(text_chunks, convert_to_tensor=False)
