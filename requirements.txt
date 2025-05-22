@@ -1,6 +1,6 @@
 streamlit
-transformers==4.40.1
-torch==2.1.2
-sentencepiece
+pdfplumber
+sentence-transformers
 faiss-cpu
-PyPDF2
+transformers
+requests
