@@ -1,0 +1,6 @@
+streamlit
+pdfplumber
+sentence-transformers
+faiss-cpu
+transformers
+requests
